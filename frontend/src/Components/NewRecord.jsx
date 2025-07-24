@@ -2,8 +2,25 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-
+import gsap from 'gsap'
+import { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
 const NewRecord = () => {
+
+  const animation = useRef(null)
+
+    useGSAP(()=>{
+      gsap.fromTo(animation.current,{
+        y:-100,
+        opacity:0
+      },{
+        y:0,
+        opacity:1,
+        duration:1,
+        ease:"power2.out"
+      })
+    })
+
     const [value,setValue] = useState({
                 purchased: ``,
                 router:``,
@@ -44,7 +61,7 @@ const NewRecord = () => {
         
     },[])
   return (
-    <div className='w-full h-full flex flex-cols justify-center items-center p-10 mt-[10px] mb-[10px]'>
+    <div ref={animation} className='w-full h-full flex flex-cols justify-center items-center p-10 mt-[10px] mb-[10px]'>
       <form className='bg-white rounded-[20px] w-[80%] min-h-[80%] flex flex-col justify-center items-left  p-10 text-[1.5rem]' onSubmit={HandleSubmit}>
         <h1 className='text-[2.5rem] text-blue-500 mb-[10px]'>
           Make a new Record

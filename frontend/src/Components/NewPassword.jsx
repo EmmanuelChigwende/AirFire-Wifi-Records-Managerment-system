@@ -1,8 +1,25 @@
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 import toast from 'react-hot-toast'
+import gsap from 'gsap'
+import { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
 
   const NewPassword = () => {
+    const animation = useRef(null)
+
+    useGSAP(()=>{
+      gsap.fromTo(animation.current,{
+        y:-100,
+        opacity:0
+      },{
+        y:0,
+        opacity:1,
+        duration:1,
+        ease:"power2.out"
+      })
+    })
+
     const [password,setPassword] = useState({
       Name:"",
       password:"",
@@ -42,7 +59,7 @@ import toast from 'react-hot-toast'
   }
 
   return (
-    <div className='w-full h-full p-10 flex justify-center items-center'>
+    <div ref={animation} className='w-full h-full p-10 flex justify-center items-center'>
       <form action="" className='w-[80%] min-h-[80%] p-10 bg-white rounded-[30px] text-[1.6rem] '>
         <p className='grid grid-rows-2 gap-3'>
           <label htmlFor="" className='text-[2rem]'>Name</label>

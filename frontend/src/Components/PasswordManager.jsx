@@ -38,7 +38,7 @@ const PasswordManager = () => {
   useGSAP(() => {
     if (!loading && contentRef.current) {
       gsap.fromTo(contentRef.current,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: -100 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
       )
     }

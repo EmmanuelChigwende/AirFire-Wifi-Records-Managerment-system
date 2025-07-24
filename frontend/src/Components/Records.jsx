@@ -25,7 +25,7 @@ const Records = () => {
     if (!fetching && contentRef.current) {
       gsap.fromTo(
         contentRef.current,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: -100 },
         { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
       )
     }
