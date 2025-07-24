@@ -47,7 +47,9 @@ const PasswordManager = () => {
   return (
     <div className='w-full h-full flex flex-col gap-[10px]'>
       {loading ? (
+        <div className='w-full h-full flex justify-center items-center'>
         <LoadingAnimation />
+        </div>
       ) : passwords ? (
         <div ref={contentRef} className='flex flex-col gap-[10px]'>
           {passwords.map(({ _id: id, ["Name"]: name, ["Description"]: details, ["Password"]: password }) => (
