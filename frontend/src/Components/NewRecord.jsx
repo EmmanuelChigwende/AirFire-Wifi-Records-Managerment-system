@@ -70,10 +70,10 @@ const NewRecord = () => {
             <input onChange={HandleData} className='border-[2px] focus:rounded-[10px]   border-blue-500' type="text" value={value.subscriptionEnd}  name="subscriptionEnd"/>
         </p>
         <p className='w-full inline-flex justify-evenly mt-[20px]'>
-          <button className='w-[200px] text-[2.5rem] rounded-[10px] text-white bg-blue-500 border-[2px] pr-[10px] pl-[10px]' type='submit'>
+          <button className='hover:bg-white hover:text-blue-500 hover:border-blue-500  w-[200px] text-[2.5rem] rounded-[10px] text-white bg-blue-500 border-[2px] pr-[10px] pl-[10px]' type='submit'>
             Save
           </button>
-          <button className='w-[200px] text-[2.5rem] rounded-[10px] text-white bg-red-500 border-[2px] pr-[10px] pl-[10px]'  onClick={() => setValue({
+          <button className='hover:bg-white hover:text-red-500 hover:border-red-500 w-[200px] text-[2.5rem] rounded-[10px] text-white bg-red-500 border-[2px] pr-[10px] pl-[10px]'  onClick={() => setValue({
               purchased: '',
               router: '',
               pppoe: '',
