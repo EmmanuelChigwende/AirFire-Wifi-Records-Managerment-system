@@ -66,9 +66,7 @@ const Login = ({setLogged}) => {
             <label htmlFor="" className='text-[2.5rem]'>Password</label>
             <input className='rounded-[15px]  focus:outline-[#1F75FE] border-[2px] border-[#1F75FE]' type="text" name='Password' value={value.Password} onChange={ApplyData} />
           </p>
-          <p className='mt-[20px] mb-[20px] border-[2px] bg-[#1F75FE] text-white rounded-[10px]  hover:bg-white hover:text-[#1F75FE] hover:border-[#1F75FE] w-[200px] flex items-center justify-center'>
-            <button type='submit' className='p-[10px] rounded-[10px]'  onClick={HandleLogin} >Login</button>
-          </p>
+            <button type='submit' className='mt-[20px] mb-[20px] border-[2px] bg-[#1F75FE] text-white rounded-[10px]  hover:bg-white hover:text-[#1F75FE] hover:border-[#1F75FE] w-[200px]'  onClick={HandleLogin} >Login</button>
         </form>
       </div>
     </div>
